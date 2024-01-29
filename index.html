@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin-left: 10%;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        .article {
+            position: relative;
+        }
+
+        .input {
+            position: absolute;
+            left: 10%;
+            padding: 3px;
+            font-size: 20px;
+        }
+
+        .button {
+            position: inherit;
+            left: 15%;
+            margin-top: 2%;
+            padding: 8px;
+            border-radius: 2px;
+            font-size: 25px;
+        }
+
+        .output {
+            position: absolute;
+            margin-left: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="article">
+        <h1>THALA FOR A REASON</h1>
+        <input type="input" placeholder="Enter the text" class="input">
+        <br> <br>
+        <button class="button">Go</button>
+        <br> <br>
+        <div class="output">
+
+        </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 
+        MOYE MOYE 
+
+        <script>
+
+        var ch;
+        $('button').on('click', function () {
+            var text = $('input').val();
+            console.log(text);
+            var src;
+            $('video').attr('controls', 'controls');
+            if (text.length == 7 || text == '7') {
+                src= '3b37a044.mp4';
+            } else {
+                src='634f2bc2.mp4';
+            }
+            $('video').attr('src', src);
+        })
+
+    </script>
+-->
+    <script>
+
+        var ch;
+        $('button').on('click', function () {
+            var text = $('input').val();
+            console.log(text);
+            var src;
+            $('video').attr('controls', 'controls');
+            if (text.length == 7 || text == '7')
+                $('.output').html("<video src='3b37a044.mp4' width='600px' height='500px' autoplay controls></video>")
+            else
+                $('.output').html("<img src='fan.jpg' width='600px' height='500px' alt='no image'>")
+        })
+
+
+    </script>
+</body>
+
+</html>
